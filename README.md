@@ -1,0 +1,1 @@
+A chrome extension that shows the user a snapshot of a github repo's images without opening the image.

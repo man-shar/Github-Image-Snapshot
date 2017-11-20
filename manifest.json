@@ -1,0 +1,25 @@
+{
+  "manifest_version": 2,
+
+  "name": "Github Image Snapshot",
+  "description": "A chrome extension that shows the user a snapshot of a github repo's images without opening the image.",
+  "version": "1.0",
+  
+  "content_scripts": [
+    {
+      "matches": ["*://github.com/*/*"],
+      "js": ["js/script.js"],
+      "run_at": "document_end"         // pay attention to this line
+    }
+  ],
+
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  },
+
+  "permissions": [
+    "activeTab",
+    "storage"
+  ]
+}
